@@ -7,8 +7,9 @@ metadata:
 spec:
   containers:
   - name: httpx
-    image: nginx:latest
+    image: 853701244726.dkr.ecr.us-west-2.amazonaws.com/httpx
     resources:
       limits:
         memory: "128Mi"
         cpu: "500m"
+  
