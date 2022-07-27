@@ -10,6 +10,6 @@ spec:
     image: 853701244726.dkr.ecr.us-west-2.amazonaws.com/httpx
     resources:
       limits:
-        memory: "128Mi"
-        cpu: "500m"
+        memory: "1Gi"
+        cpu: "1"
   
