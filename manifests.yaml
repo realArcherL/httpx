@@ -2,14 +2,12 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: httpx
-  labels:
-    name: httpx
 spec:
-  containers:
-  - name: httpx
-    image: 853701244726.dkr.ecr.us-west-2.amazonaws.com/httpx
-    resources:
-      limits:
-        memory: "1Gi"
-        cpu: "1"
-  
+  template:
+    spec:
+      containers:
+      - name: httpx
+        image: 853701244726.dkr.ecr.us-west-2.amazonaws.com/httpx
+        command: ["httpx", "-h"]
+      restartPolicy: Never
+  backoffLimit: 4
